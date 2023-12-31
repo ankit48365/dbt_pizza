@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: Dimension_Pizza
+    description: "Dimension table created from pizza types and pizza table"
+    columns:
+      - name: name
+        description: "Name of the pizza"
+        tests:
+          - not_null
+          
+      - name: category
+        description: "Broad Category Name"
+        tests:
+          - not_null
+      - name: pizza_type_id
+        description: "General Pizza ID (does not distinguish Size)"
+        tests:
+          - not_null
+      - name: pizza_id
+        description: "Unique Identifier - Pizza type ID (distinguish Size)"
+        tests:
+          - not_null
+          - unique
+      - name: size
+        description: "The price of the pizza"
+        tests:
+          - not_null
+          # - accepted_values:
+          #     values: ['L', 'M', 'S']
+      - name: price
+        description: "Prize of pizza respective to its size"
+        tests:
+          - unique
+          - not_null
+      - name: price_category
+        description: "General categorization of pizza, if its exopensive or cheap"
+        tests:
+          - not_null
+      - name: ingredients
+        description: "ingredients used in the pizza"
+        tests:
+          - not_null
