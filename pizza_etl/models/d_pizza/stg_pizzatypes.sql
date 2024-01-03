@@ -15,4 +15,7 @@
 
 
 SELECT name, category, ingredients, pizza_type_id
-FROM {{ source('src_pizza', 'src_sqlserver_pizza_types') }}
+FROM {{ source('src_pizza', 'pizza_types') }}
+{% if target.name == 'dev' %}
+fetch first 10 rows only
+{% endif %}

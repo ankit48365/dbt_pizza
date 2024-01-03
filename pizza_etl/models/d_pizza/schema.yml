@@ -1,13 +1,12 @@
 version: 2
 
-# h
 sources:
   - name: src_pizza
-    database: test_db
+    # database: prod_db
     schema: pizza
     description: Source system schema description
     tables:
-      - name: src_sqlserver_pizzas
+      - name: pizzas
         # identifier: "pizzas"
         description: Each record is a unique pizza price by its size - source table loaded from sql server to postgres staging via airbyte
         columns:
@@ -24,11 +23,14 @@ sources:
             tests:
             - unique
             - not_null
-          - name: pizza_type_id
+          - name: fk_pizza_type_id
             description: General Pizza ID (does not distinguish Size)
             tests:
             - not_null
-      - name: src_sqlserver_pizza_types
+            - relationships:
+                to: ref('stg_pizzatypes')
+                field: pizza_type_id
+      - name: pizza_types
         # identifier: "pizzas"
         description: Each record is each pizza tpe categorization and its ingredients -source table loaded from sql server to postgres staging via airbyte
         columns:
