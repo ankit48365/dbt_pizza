@@ -33,10 +33,23 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   pizza_etl:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    # example:
+    #   +materialized: view
+    # d_pizza:
+    #   stg_pizzas:
+    #     +materialized: view  # replace 'view' with your materialization type
+    #   stg_pizzatypes:
+    #     +materialized: view  # replace 'view' with your materialization type
+
+sources:
+  pizza_etl:
+    # Config indicated by + and applies to all files under models/example/
+    # example:
+    #   +materialized: view
     d_pizza:
       stg_pizzas:
-        +materialized: view  # replace 'view' with your materialization type
+      +enabled: true
+      # +materialized: view  # replace 'view' with your materialization type
       stg_pizzatypes:
-        +materialized: view  # replace 'view' with your materialization type
+      +enabled: true
+      # +materialized: view  # replace 'view' with your materialization type

@@ -1,6 +1,6 @@
 -- stg_pizzatypes.sql
 
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 
 
@@ -8,6 +8,16 @@
 -- 	FROM pizza.src_sqlserver_pizzas;
 
 
-SELECT size, price, pizza_id, pizza_type_id
-FROM {{ source('src_pizza', 'src_sqlserver_pizzas') }}
+SELECT size, price, pizza_id, pizza_type_id --as fk_pizza_type_id
+FROM {{ source('src_pizza', 'pizzas') }}
+{% if target.name == 'dev' %}
+where pizza_type_id in ('bbq_ckn','big_meat','brie_carre','calabrese','cali_ckn','ckn_alfredo','ckn_pesto','classic_dlx','five_cheese')
 
+-- fetch first 10 rows only
+{% endif %}
+
+
+-- https://docs.getdbt.com/reference/dbt-jinja-functions/target
+-- {% if target.name == 'dev' %}
+-- where created_at >= dateadd('day', -3, current_date)
+-- {% endif %}
