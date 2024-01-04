@@ -23,7 +23,7 @@ sources:
             tests:
             - unique
             - not_null
-          - name: fk_pizza_type_id
+          - name: pizza_type_id
             description: General Pizza ID (does not distinguish Size)
             tests:
             - not_null

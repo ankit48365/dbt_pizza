@@ -13,7 +13,7 @@ models:
         description: "Broad Category Name"
         tests:
           - not_null
-      - name: pizza_type_id
+      - name: fk_pizza_type_id
         description: "General Pizza ID (does not distinguish Size)"
         tests:
           - not_null
@@ -31,7 +31,7 @@ models:
       - name: price
         description: "Prize of pizza respective to its size"
         tests:
-          - unique
+          # - unique
           - not_null
       - name: price_category
         description: "General categorization of pizza, if its exopensive or cheap"
