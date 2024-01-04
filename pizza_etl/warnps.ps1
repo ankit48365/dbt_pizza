@@ -1,0 +1,1 @@
+$env:PYTHONWARNINGS="ignore::DeprecationWarning"

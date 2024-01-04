@@ -17,10 +17,13 @@ models:
         tests:
         - unique
         - not_null
-      - name: pizza_type_id
+      - name: fk_pizza_type_id
         description: General Pizza ID (does not distinguish Size)
         tests:
         - not_null
+        - relationships:
+            to: ref('transformed_pizza_types')
+            field: pizza_type_id
       - name: dbt_DateCreated
         description: date record created
         tests:

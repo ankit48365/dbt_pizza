@@ -8,10 +8,12 @@
 -- 	FROM pizza.src_sqlserver_pizzas;
 
 
-SELECT size, price, pizza_id, pizza_type_id as fk_pizza_type_id
+SELECT size, price, pizza_id, pizza_type_id --as fk_pizza_type_id
 FROM {{ source('src_pizza', 'pizzas') }}
 {% if target.name == 'dev' %}
-fetch first 10 rows only
+where pizza_type_id in ('bbq_ckn','big_meat','brie_carre','calabrese','cali_ckn','ckn_alfredo','ckn_pesto','classic_dlx','five_cheese')
+
+-- fetch first 10 rows only
 {% endif %}
 
 

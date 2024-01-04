@@ -1,7 +1,7 @@
 -- stg_pizzatypes.sql
 -- Dimesion_Pizza.sql
 
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 with CTE_pizza_types as ( SELECT name, category, ingredients, pizza_type_id
     FROM {{ ref('transformed_pizza_types') }}
