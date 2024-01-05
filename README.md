@@ -19,3 +19,5 @@
 
 <h3>Data Model:</h3>
 <p>Partially completed as of Dec 26th 2024</p>
+
+![Data Lineage](./logo/DataModel.png)
