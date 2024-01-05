@@ -1,7 +1,5 @@
-<h1 align="center">The Pizza Datawarehouse :)</h1>
-<p align="center">Tech Stack used in this Project</p>
-
-
+<h2>The Pizza Datawarehouse </h2>
+<p>Tech Stack used in this Project</p>
 <div style="text-align: center;">
   <table>
     <tr>
