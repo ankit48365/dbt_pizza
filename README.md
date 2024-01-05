@@ -1,28 +1,9 @@
-<!-- {% docs __overview__ %} -->
-<!-- # Demo Pizza Project
-
-This is our custom welcome page. 
-
-## Tech Stack in Our Project
-
-1. Source System    -   SQL SERVER
-2. Extract Load     -   Airbyte
-3. Transform        -   DBT
-4. DWH DB           -   PostGreSQL
-5. Code Repo        -   Github
-6. Orchestration    -   Airflow
-
-## Links
-
-Provide Links here -->
-
-
 <h2>The Pizza Datawarehouse </h2>
 <p>Tech Stack used in this Project</p>
 <div style="text-align: center;">
   <table>
     <tr>
-      <td align="center"><img src="../../logo/microsoft-sql-server-log.png" width="50"/></td>
+      <td align="center"><img src="./logo/microsoft-sql-server-log.png" width="50"/></td>
       <td align="center"><img src="./logo/airbyte-logo.png" width="50"/></td>
       <td align="center"><img src="./logo/airflow-svgrepo-com.png" width="50"/></td>
       <td align="center"><img src="./logo/dbt-svgrepo-com.png" width="50"/></td>
@@ -45,6 +26,4 @@ Looking ahead, we plan to enhance our data visualization capabilities by integra
 <h3>Data Model:</h3>
 <p>Partially completed as of Dec 26th 2024</p>
 
-![Data Lineage](../../logo/DataModel.png)
-
-<!-- {% enddocs %} -->
+![Data Lineage](./logo/DataModel.png)
