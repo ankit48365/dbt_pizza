@@ -16,7 +16,7 @@ This is a demo Datawarehouse project.
 
 <table>
   <tr>
-    <td align="center"><img src="./logo/microsoft-sql-server-logo.png" width="100"/></td>
+    <td align="center"><img src="./logo/microsoft-sql-server-log.png" width="100"/></td>
     <td align="center"><img src="./logo/airbyte-logo.png" width="100"/></td>
     <td align="center"><img src="./logo/airflow-svgrepo-com.png" width="100"/></td>
     <td align="center"><img src="./logo/dbt-svgrepo-com.png" width="100"/></td>
