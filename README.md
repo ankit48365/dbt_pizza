@@ -15,7 +15,13 @@
 </div>
 
 <h3>Description:</h3>
-<p>This is a farely simple project where we run a daily batch to read source data for a pizza store (SQL Server), We use Airbyte to Extract and Load data to Staging layer, Further we use DBT to clean, massage and Transform the data in the middle layer. We use DBT again to load Fact and Dimension tables to be used in BI Stage. PostgreSQL is the Data Platform used in this project. Apache Airflow is used for Data Orchestration. (Future enhancement is integration of Apache Superset for Data Visualization) </p>
+<p>This project, though straightforward in its execution, involves a sophisticated daily batch process that reads source data from a pizza store’s SQL Server. We employ Airbyte, a powerful Extract and Load tool, to transfer this data to our Staging layer.
+
+The data then undergoes a series of transformations in the middle layer, where we use DBT to cleanse and refine it. DBT’s versatility is further demonstrated as we use it again to load Fact and Dimension tables, which are crucial for our Business Intelligence Stage.
+
+PostgreSQL serves as the robust Data Platform for this project, ensuring efficient data management and storage. To orchestrate these data processes, we utilize Apache Airflow, a dynamic workflow scheduler that automates and monitors workflows.
+
+Looking ahead, we plan to enhance our data visualization capabilities by integrating Apache Superset, a modern data exploration and visualization platform. This will allow us to present our data in a more interactive and insightful manner, thereby driving more informed business decisions. </p>
 
 <h3>Data Model:</h3>
 <p>Partially completed as of Dec 26th 2024</p>
