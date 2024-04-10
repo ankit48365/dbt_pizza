@@ -1,6 +1,10 @@
 Welcome to your new dbt project!
 
 ### Using the starter project
+1. activate virtual environment ((.vdbt) PS E:\here\git\dbt_pizza\ )
+2. Then goto this main project location ((.vdbt) PS E:\here\git\dbt_pizza\pizza_etl> )
+3. now run dbt debug from here
+
 
 Try running the following commands:
 - dbt run
